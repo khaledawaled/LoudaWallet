@@ -1,7 +1,7 @@
 package com.example.android.ewallet.Models;
 
 import android.graphics.Bitmap;
-
+//LOUDA TEST
 public class User {
     private String firstName;
     private String secondName;
