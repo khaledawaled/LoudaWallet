@@ -64,9 +64,8 @@ public class SignUp1Activity extends AppCompatActivity {
                             Log.d(TAG, "onComplete: Register Successful");
                             Toast.makeText(SignUp1Activity.this, "Register Success",Toast.LENGTH_SHORT).show();
 
-                            user = new User();
-                            user.setEmail(email);
-                            user.setPassword(pass);
+
+                        goTosecondPage();
 
                         }
                         else {
@@ -107,9 +106,11 @@ public class SignUp1Activity extends AppCompatActivity {
         }
         return valid;
     }
-    private void goToMainPage() {
-        Intent i = new Intent(SignUp1Activity.this,UserMain.class);
-        startActivity(i);
+    private void goTosecondPage() {
+        Intent openmain = new Intent(SignUp1Activity.this,SecondRegisterActivity.class);
+        openmain.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(openmain);
+        finish();
 
     }
 }
