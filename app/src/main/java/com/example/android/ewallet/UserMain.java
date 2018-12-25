@@ -151,7 +151,9 @@ public class UserMain extends AppCompatActivity {
                 break;
 
             case R.id.nav_logout:
-                Toast.makeText(this,"logout",Toast.LENGTH_SHORT).show();
+
+                Intent i = new Intent(this,LognInActivity.class);
+                startActivity(i);
                 break;
         }
     }
@@ -165,17 +167,6 @@ public class UserMain extends AppCompatActivity {
 
     }
 
-
-
-
-/*
-
-
-
-
-
-
-*/
 
 
 }

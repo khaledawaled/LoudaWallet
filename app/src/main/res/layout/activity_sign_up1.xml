@@ -19,55 +19,56 @@
         />
 
     <EditText
-        android:id="@+id/username"
+        android:id="@+id/emailsignup"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="200dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/input"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:drawableLeft="@drawable/baseline_perm_identity_black_18dp"
-        />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_alignEnd="@+id/username"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="181dp"
-        android:background="@drawable/input"
         android:drawableLeft="@drawable/email"
+
         android:ems="10"
         android:inputType="textEmailAddress"
         android:padding="10dp" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passsignup"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_alignEnd="@+id/username"
+        android:layout_alignEnd="@+id/emailsignup"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="97dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="210dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/password"
         android:ems="10"
         android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/confirmpasssignup"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignEnd="@+id/emailsignup"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="105dp"
         android:background="@drawable/input"
-        android:padding="10dp"
-        android:drawableLeft="@drawable/password"/>
+        android:drawableLeft="@drawable/password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="10dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/signupBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="77dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/input"
         android:drawableRight="@drawable/baseline_arrow_right_alt_black_18dp"
         android:padding="10dp"

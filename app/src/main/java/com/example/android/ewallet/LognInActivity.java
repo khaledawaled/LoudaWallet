@@ -1,5 +1,6 @@
 package com.example.android.ewallet;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,7 +22,7 @@ public class LognInActivity extends AppCompatActivity {
 
     private static final String TAG = "khara";
     private EditText emailField, passwordField;
-    private Button signInBtn;
+    private Button signInBtn,signUpBtn;
     private String email, password;
     private FirebaseAuth mAuth;
 
@@ -36,6 +37,16 @@ public class LognInActivity extends AppCompatActivity {
         emailField = findViewById(R.id.username);
         passwordField = findViewById(R.id.password);
         signInBtn = findViewById(R.id.sign_in);
+        signUpBtn = findViewById(R.id.sign_up);
+
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(LognInActivity.this,SignUp1Activity.class);
+                startActivity(i);
+            }
+        });
 
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override

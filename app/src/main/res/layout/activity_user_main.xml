@@ -40,6 +40,10 @@
             android:layout_alignParentTop="true"
             android:layout_marginStart="0dp"
             android:layout_marginTop="505dp"
+            android:tooltipText="#ffffff"
+            app:itemTextColor="#ffffff"
+            android:background="#20ffffff"
+            app:itemIconTint="#ffffff"
             app:menu="@menu/nav_items"></android.support.design.widget.BottomNavigationView>
 
 
