@@ -58,7 +58,6 @@ public class GenerationFragment extends Fragment {
                 generateQrCode(content);
             }
         });
-
     }
 
     protected void generateQrCode(String content) {
