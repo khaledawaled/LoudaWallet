@@ -73,7 +73,6 @@ public class UserMain extends AppCompatActivity {
 
         setFragment(transactionsFragment);
 
-        //soliman
 
         mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
