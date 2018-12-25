@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mxn.soul.flowingdrawer_core.FlowingDrawer xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    app:edPosition="1"
+    app:edMenuSize="260dp"
+
+    app:edMenuBackground="#ffffff"
+    android:layout_above="@+id/main_tabs"
+    >
+
+    <!--content-->
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/main_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/main_tabs"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true">
+
+        </FrameLayout>
+
+        <android.support.design.widget.BottomNavigationView
+            android:id="@+id/main_tabs"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="505dp"
+            android:background="#22151041"
+            app:menu="@menu/nav_items"></android.support.design.widget.BottomNavigationView>
+
+
+
+
+
+
+    </RelativeLayout>>
+
+
+
+    <!--menu-->
+    <com.mxn.soul.flowingdrawer_core.FlowingMenuLayout
+        android:id="@+id/menulayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+                >
+
+        <FrameLayout
+            android:id="@+id/id_container_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            >
+
+
+        </FrameLayout>
+
+
+        <android.support.design.widget.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginBottom="3dp"
+
+            android:background="#ffffff"
+            app:menu="@menu/navigation_menu"></android.support.design.widget.NavigationView>
+
+
+    </com.mxn.soul.flowingdrawer_core.FlowingMenuLayout>
+
+
+
+</com.mxn.soul.flowingdrawer_core.FlowingDrawer>
