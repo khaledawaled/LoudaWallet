@@ -49,7 +49,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class bUserMain extends AppCompatActivity {
+public class UserMain extends AppCompatActivity {
 
     private FlowingDrawer mDrawer;
     private NavigationView navigationView ;
