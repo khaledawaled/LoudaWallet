@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "406103419982",
+    "firebase_url": "https://loudawallet.firebaseio.com",
+    "project_id": "loudawallet",
+    "storage_bucket": "loudawallet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406103419982:android:880202ec66cff3be",
+        "android_client_info": {
+          "package_name": "com.example.android.ewallet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406103419982-n2gouhfr1jrv51npmf3va5aou6157g53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.ewallet",
+            "certificate_hash": "3e4303e6b168253d3bc9429fb3b7ddb2239094d3"
+          }
+        },
+        {
+          "client_id": "406103419982-446s69ckap8ti5uep7q8qt3o5dma68cu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIpxAiHu7Iw7sX8mMU6-2nd2E5ABqwPCI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406103419982-446s69ckap8ti5uep7q8qt3o5dma68cu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406103419982:android:35af2e21c6b1fabd",
+        "android_client_info": {
+          "package_name": "com.example.khaled.testzxing"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406103419982-lf63u30m6r8gmloojomqt4gcf5cj73lr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.khaled.testzxing",
+            "certificate_hash": "3e4303e6b168253d3bc9429fb3b7ddb2239094d3"
+          }
+        },
+        {
+          "client_id": "406103419982-446s69ckap8ti5uep7q8qt3o5dma68cu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIpxAiHu7Iw7sX8mMU6-2nd2E5ABqwPCI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "406103419982-446s69ckap8ti5uep7q8qt3o5dma68cu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
