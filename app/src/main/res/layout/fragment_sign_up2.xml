@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp2Fragment"
+    android:background="@drawable/back4">
+
+
+    <EditText
+        android:id="@+id/username2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/baseline_perm_identity_black_18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/email2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/username2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="181dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/email"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/password2"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/username2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="97dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/confirmpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/username2"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginBottom="97dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/password"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/baseline_perm_identity_black_18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/secondname"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/baseline_perm_identity_black_18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <EditText
+        android:id="@+id/ssn"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/input"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+
+    <EditText
+        android:id="@+id/pincode"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="420dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/input"
+        android:drawableLeft="@drawable/password"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/img_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="470dp"
+        android:text="Upload Image"
+        android:background="@drawable/button"/>
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="470dp"
+        android:background="@drawable/button"
+        android:text="Sign Up" />
+
+
+</FrameLayout>
