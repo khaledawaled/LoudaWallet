@@ -49,7 +49,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 
-public class UserMain extends AppCompatActivity {
+public class bUserMain extends AppCompatActivity {
 
     private FlowingDrawer mDrawer;
     private NavigationView navigationView ;
@@ -72,6 +72,8 @@ public class UserMain extends AppCompatActivity {
         generationFragment = new GenerationFragment();
 
         setFragment(transactionsFragment);
+
+        //soliman
 
         mMainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
