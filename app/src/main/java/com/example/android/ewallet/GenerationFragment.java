@@ -40,6 +40,7 @@ public class GenerationFragment extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_generation,container,false);
+
         return view;
     }
 

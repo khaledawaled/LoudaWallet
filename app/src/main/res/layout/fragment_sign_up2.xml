@@ -140,7 +140,7 @@
         android:layout_marginStart="80dp"
         android:layout_marginTop="470dp"
         android:text="Upload Image"
-        android:background="@drawable/button"/>
+        android:background="@drawable/input"/>
 
     <Button
         android:id="@+id/signup"
@@ -148,7 +148,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="210dp"
         android:layout_marginTop="470dp"
-        android:background="@drawable/button"
+        android:background="@drawable/input"
         android:text="Sign Up" />
 
 
