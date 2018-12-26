@@ -3,6 +3,7 @@ package com.example.android.ewallet.Models;
 import android.graphics.Bitmap;
 //LOUDA TEST
 public class User {
+    private String id;
     private String firstName;
     private String secondName;
     private String userName;
@@ -13,7 +14,10 @@ public class User {
     private Bitmap profilePic;
     private Wallet wallet;
 
-    public User(String firstName, String secondName, String userName, String email, String password, String pinCode, String ssn, Bitmap profilePic) {
+    public  User() {}
+
+    public User(String id,String firstName, String secondName, String userName, String email, String password, String pinCode, String ssn, Bitmap profilePic) {
+        this.id = id;
         this.firstName = firstName;
         this.secondName = secondName;
         this.userName = userName;
@@ -23,6 +27,14 @@ public class User {
         this.ssn = ssn;
         this.profilePic = profilePic;
         wallet = new Wallet();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     public String getFirstName() {
