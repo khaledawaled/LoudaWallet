@@ -11,7 +11,7 @@ public class User {
     private String pinCode;
     private String ssn;
     private Bitmap profilePic;
-    Wallet wallet;
+    private Wallet wallet;
 
     public User(String firstName, String secondName, String userName, String email, String password, String pinCode, String ssn, Bitmap profilePic) {
         this.firstName = firstName;
@@ -22,6 +22,7 @@ public class User {
         this.pinCode = pinCode;
         this.ssn = ssn;
         this.profilePic = profilePic;
+        wallet = new Wallet();
     }
 
     public String getFirstName() {

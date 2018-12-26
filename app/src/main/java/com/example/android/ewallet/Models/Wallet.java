@@ -10,6 +10,7 @@ import java.security.spec.ECGenParameterSpec;
 public class Wallet {
     private PrivateKey privateKey;
     private PublicKey publicKey;
+    private double balance = 1000;
 
     public Wallet() {
         generateKeyPair();
