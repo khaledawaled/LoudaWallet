@@ -1,7 +1,5 @@
 package com.example.android.ewallet;
 
-
-
 import android.content.Intent;
 import android.support.annotation.Nullable;
 import android.support.design.widget.BottomNavigationView;
@@ -50,7 +48,6 @@ import com.mxn.soul.flowingdrawer_core.FlowingDrawer;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
 public class UserMain extends AppCompatActivity {
 
     private FlowingDrawer mDrawer;
@@ -60,6 +57,7 @@ public class UserMain extends AppCompatActivity {
     private TransactionsFragment transactionsFragment;
     private ScanFragment scanFragment;
     private GenerationFragment generationFragment;
+    private SignUp2Fragment signUp2Fragment;
     private FirebaseUser currentUser;
 
     @Override
@@ -67,12 +65,13 @@ public class UserMain extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_main);
 
-        mMainNav = (BottomNavigationView)findViewById(R.id.main_tabs);
-        mMainframe = (FrameLayout)findViewById(R.id.main_frame);
+        mMainNav = findViewById(R.id.main_tabs);
+        mMainframe = findViewById(R.id.main_frame);
 
         transactionsFragment = new TransactionsFragment();
         scanFragment = new ScanFragment();
         generationFragment = new GenerationFragment();
+        signUp2Fragment = new SignUp2Fragment();
 
         setFragment(transactionsFragment);
 
@@ -139,6 +138,8 @@ public class UserMain extends AppCompatActivity {
         {
             case R.id.nav_account:
                 Toast.makeText(this,"Account",Toast.LENGTH_SHORT).show();
+                mMainNav.setVisibility(View.GONE);
+                setFragment(signUp2Fragment);
                 break;
 
             case R.id.nav_friends:
