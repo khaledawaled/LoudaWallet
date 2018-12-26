@@ -25,6 +25,7 @@ public class SignUp1Activity extends AppCompatActivity {
     private Button signup;
     private String email,pass,confirmPass;
     private FirebaseAuth mAuth;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +63,10 @@ public class SignUp1Activity extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             Log.d(TAG, "onComplete: Register Successful");
                             Toast.makeText(SignUp1Activity.this, "Register Success",Toast.LENGTH_SHORT).show();
+
+                            user = new User();
+                            user.setEmail(email);
+                            user.setPassword(pass);
 
                         }
                         else {
