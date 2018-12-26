@@ -157,11 +157,17 @@ public class UserMain extends AppCompatActivity {
             case R.id.nav_logout:
 
                 FirebaseAuth.getInstance().signOut();
-                Intent i = new Intent(this,LognInActivity.class);
-                startActivity(i);
+
+                Intent logout = new Intent(this,LognInActivity.class);
+                logout.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(logout);
+                finish();
+
                 break;
         }
     }
+
+
 
     private void setFragment(Fragment fragment) {
 

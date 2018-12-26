@@ -20,7 +20,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class LognInActivity extends AppCompatActivity {
 
-    private static final String TAG = "khara";
+    private static final String TAG = "okay";
     private EditText emailField, passwordField;
     private Button signInBtn,signUpBtn;
     private String email, password;
@@ -71,8 +71,10 @@ public class LognInActivity extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             Log.d(TAG, "onComplete: SUCCESS LOG IN");
                             FirebaseUser currentUser = mAuth.getCurrentUser();
-                            Intent i = new Intent(LognInActivity.this,UserMain.class);
-                            startActivity(i);
+                            Intent movetomain = new Intent(LognInActivity.this,UserMain.class);
+                            movetomain.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                            startActivity(movetomain);
+                            finish();
                         }
                         else {
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
