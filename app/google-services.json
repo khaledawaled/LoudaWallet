@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "406103419982-p6tc53vshkttcttjba539mlauatmqm8b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.ewallet",
+            "certificate_hash": "9b3f5793dd286ccbde3aeb8bc31e2e7a8c64226a"
+          }
+        },
+        {
           "client_id": "406103419982-446s69ckap8ti5uep7q8qt3o5dma68cu.apps.googleusercontent.com",
           "client_type": 3
         }

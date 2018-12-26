@@ -71,6 +71,8 @@ public class LognInActivity extends AppCompatActivity {
                         if(task.isSuccessful()) {
                             Log.d(TAG, "onComplete: SUCCESS LOG IN");
                             FirebaseUser currentUser = mAuth.getCurrentUser();
+                            Intent i = new Intent(LognInActivity.this,UserMain.class);
+                            startActivity(i);
                         }
                         else {
                             Log.w(TAG, "signInWithEmail:failure", task.getException());

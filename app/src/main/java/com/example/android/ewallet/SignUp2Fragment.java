@@ -7,7 +7,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,8 +39,11 @@ public class SignUp2Fragment extends Fragment {
     final static int reqcode = 1;
     private FirebaseAuth mAuth;
     String currentUserID;
-    private EditText username,email,pass,confirmpass,fname,sname,ssn,pincode;
-    private DatabaseReference userRef;
+    private EditText username,email,pass,fname,sname,ssn,pincode;
+    private DatabaseReference dataRef;
+    private Button signUpBtn;
+    public static final String TAG = "khara";
+    User user;
 
     public SignUp2Fragment() {
         // Required empty public constructor
@@ -50,19 +55,31 @@ public class SignUp2Fragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_sign_up2,container,false);
 
-        username = view.findViewById(R.id.username2);
+
+
+        return view;
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+       /* username = view.findViewById(R.id.username2);
         email = view.findViewById(R.id.email2);
         pass = view.findViewById(R.id.password2);
-        confirmpass = view.findViewById(R.id.confirmpassword);
         fname = view.findViewById(R.id.firstname);
         sname = view.findViewById(R.id.secondname);
         ssn = view.findViewById(R.id.ssn);
         pincode = view.findViewById(R.id.pincode);
+        signUpBtn = view.findViewById(R.id.sign_up);
+        user = new User();
+        user.setEmail(email.getText().toString());
+        user.setPassword(pass.getText().toString());
+
+
+*/
 
         Button upload = view.findViewById(R.id.img_upload);
-        mAuth = FirebaseAuth.getInstance();
-        currentUserID = mAuth.getCurrentUser().getUid();
-        userRef = FirebaseDatabase.getInstance().getReference().child("users");
+
 
         upload.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,11 +89,18 @@ public class SignUp2Fragment extends Fragment {
                 i.setType("image/*");
                 i.setAction(Intent.ACTION_GET_CONTENT);
                 startActivityForResult(i,reqcode);
-
             }
         });
 
-        return view;
+        signUpBtn = view.findViewById(R.id.signup);
+
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                saveDataToFireBase();
+            }
+        });
+
     }
 
     @Override
@@ -92,7 +116,21 @@ public class SignUp2Fragment extends Fragment {
 
     }
 
-    private void saveDataIntoFireBase(){
+
+   private void saveDataToFireBase() {
+       FirebaseDatabase database = FirebaseDatabase.getInstance();
+       DatabaseReference myRef = database.getReference("message");
+
+       myRef.setValue("Hello, World!");
+
+        mAuth = FirebaseAuth.getInstance();
+        currentUserID = mAuth.getCurrentUser().getUid();
+       Log.d(TAG, "saveDataToFireBase: " + mAuth.getCurrentUser().getEmail());
+        dataRef = FirebaseDatabase.getInstance().getReference("loudawallet");
+        dataRef.child("users").child(currentUserID).setValue(user);
+    }
+
+    /*private void saveDataIntoFireBase(){
 
         HashMap userMap = new HashMap();
 
@@ -124,5 +162,5 @@ public class SignUp2Fragment extends Fragment {
             }
         });
 
-    }
+    }*/
 }
