@@ -35,6 +35,8 @@ import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
 import com.github.florent37.materialviewpager.MaterialViewPager;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.MultiFormatWriter;
 import com.google.zxing.WriterException;
@@ -58,6 +60,7 @@ public class UserMain extends AppCompatActivity {
     private TransactionsFragment transactionsFragment;
     private ScanFragment scanFragment;
     private GenerationFragment generationFragment;
+    private FirebaseUser currentUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -152,6 +155,7 @@ public class UserMain extends AppCompatActivity {
 
             case R.id.nav_logout:
 
+                FirebaseAuth.getInstance().signOut();
                 Intent i = new Intent(this,LognInActivity.class);
                 startActivity(i);
                 break;
@@ -164,7 +168,6 @@ public class UserMain extends AppCompatActivity {
         fragmentTransaction.replace(R.id.content,fragment);
         fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
-
     }
 
 
